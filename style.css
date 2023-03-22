@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 30px;
+    background-color: #b3b3b3;
+}
+
+.wrapper {
+    margin-top: 5vh;
+    margin-left: 10vw;
+}
+
+button {
+    font-size: 27px;
+    padding: 10px 17px;
+    margin-top: 3vh;
+    margin-left: 1.5vw;
+}
+.word-display {
+    max-width: 20vw;
+    min-height: 30vh;
+    border: 1px solid black;
+    border-radius: 20%;
+    background-color: #fff;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    padding-left: 5vw;
+    padding-top: 10vh;
+}
+
+label, .meaning {
+    margin-top: 2vh;
+    font-size: 35px;
+}
+.meaning{
+    background-color: #fbe5c9;
+}
