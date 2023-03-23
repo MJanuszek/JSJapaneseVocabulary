@@ -13,13 +13,36 @@
 
     <div class="wrapper">
         <h4>Learn Japanese vocabulary:</h4>
+        <select name="" id="category">
+            <option value="adjective">Przymiotnik</option>
+            <option value="verb">Czasownik</option>
+            <option value="noun">Rzeczownik</option>
+        </select>
+        <br>
         <button class="show-btn">Show word</button>
         <div class="word-display"></div>
         <label for="meaning">Podaj znaczenie po polsku:
             <br>
-            <input type="text" class="meaning"></label>
+            <input type="text" class="meaning input" id="valueToCompare"></label>
         <br>
         <button class="checkCorrect">Sprawdź</button>
+        <br>
+        <div class="form-container">
+            <form action="">
+                <label for="">Podaj słowo po japońsku: <input type="text" class="input"></label>
+                <br>
+                <label for="">Podaj znaczenie po polsku: <input type="text" class="input"></label>
+                <br>
+                <label for=""><input type="radio" value="adjective">Przymiotnik</label>
+                <br>
+                <label for=""><input type="radio" value="adjective">Rzeczownik</label>
+                <br>
+                <label for=""><input type="radio" value="adjective">Czasownik</label>
+
+
+            </form>
+        </div>
+
 
     </div>
 
