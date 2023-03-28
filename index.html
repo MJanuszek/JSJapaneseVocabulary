@@ -27,20 +27,26 @@
         <br>
         <button class="checkCorrect">Sprawdź</button>
         <br>
+        <h4>Dodaj słówka do kolakcji: </h4>
         <div class="form-container">
             <form action="">
-                <label for="">Podaj słowo po japońsku: <input type="text" class="input"></label>
+                <label for="jap-word">Podaj słowo po japońsku: <input type="text" class="input" id="jap-word"
+                        required></label>
                 <br>
-                <label for="">Podaj znaczenie po polsku: <input type="text" class="input"></label>
+                <label for="pl-word">Podaj znaczenie po polsku: <input type="text" class="input" id="pl-word"
+                        required></label>
                 <br>
-                <label for=""><input type="radio" value="adjective">Przymiotnik</label>
-                <br>
-                <label for=""><input type="radio" value="adjective">Rzeczownik</label>
-                <br>
-                <label for=""><input type="radio" value="adjective">Czasownik</label>
-
-
             </form>
+
+            <select class="select" name="" id="form-category">
+                <option value="adjective">Przymiotnik</option>
+                <option value="noun">Rzeczownik</option>
+                <option value="verb">Czasownik</option>
+            </select>
+
+            <!--  -->
+            <button class="add">Dodaj</button>
+            <br>
         </div>
 
 

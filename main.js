@@ -12,10 +12,14 @@ const checkBtn = document.querySelector(".checkCorrect");
 const wordDisplay = document.querySelector(".word-display");
 const category = document.getElementById("category");
 let valueToCompare = document.getElementById("valueToCompare");
+const addBtn = document.querySelector(".add");
+const japInput = document.getElementById("jap-word");
+const plInput = document.getElementById("pl-word");
+const wordCategory = document.getElementById("form-category");
 // ---------------------
 let currentInputValue = '';
 let currentWord = '';
-let filteredWords;
+let filteredWords; 
 let filtered;
 
 
@@ -37,7 +41,7 @@ valueToCompare.addEventListener("change", (e)=> {
 })
 // compare input.value with drawn word:
 const checkIfCorrectAnswer = () => {
-    if(currentInputValue.toLowerCase() === currentWord.word.toLowerCase()){
+    if(currentInputValue.toLowerCase() === currentWord.meaningPL.toLowerCase()){
         console.log("poprawna odpowiedź");
     } else {
         console.log("niepoprawna odpowiedź");
@@ -45,5 +49,19 @@ const checkIfCorrectAnswer = () => {
     valueToCompare.value = "";
 }
 
+const createNewWord = (e) => {
+    e.preventDefault();
+    // let japWord = {id, word: "", meaningPL: "", meaningANG: "", category: ""};
+    let japWord = {id: 1, word: "", meaningPL: "",};
+    japWord.id = words.length+1;
+    japWord.word = japInput.value;
+    japWord.meaningPL = plInput.value;
+    japWord.category = wordCategory.value;
+    console.log(japWord);
+    words.push(japWord);
+
+}
+
 showBtn.addEventListener("click", showJapaneseWord);
 checkBtn.addEventListener("click", checkIfCorrectAnswer);
+addBtn.addEventListener("click", createNewWord)
