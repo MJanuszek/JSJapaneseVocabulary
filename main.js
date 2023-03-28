@@ -15,6 +15,7 @@ let valueToCompare = document.getElementById("valueToCompare");
 const addBtn = document.querySelector(".add");
 const japInput = document.getElementById("jap-word");
 const plInput = document.getElementById("pl-word");
+const angInput = document.getElementById("ang-word");
 const wordCategory = document.getElementById("form-category");
 // ---------------------
 let currentInputValue = '';
@@ -52,10 +53,11 @@ const checkIfCorrectAnswer = () => {
 const createNewWord = (e) => {
     e.preventDefault();
     // let japWord = {id, word: "", meaningPL: "", meaningANG: "", category: ""};
-    let japWord = {id: 1, word: "", meaningPL: "",};
+    let japWord = {};
     japWord.id = words.length+1;
     japWord.word = japInput.value;
     japWord.meaningPL = plInput.value;
+    japWord.meaningANG = angInput.value;
     japWord.category = wordCategory.value;
     console.log(japWord);
     words.push(japWord);
